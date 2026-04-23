@@ -1,4 +1,6 @@
-let cart = [];
+// Загрузка корзины из LocalStorage при старте страницы
+const savedCart = localStorage.getItem("cart");
+let cart = savedCart ? JSON.parse(savedCart) : [];
 
 const products = document.querySelectorAll(".product");
 const addButtons = document.querySelectorAll(".add-to-cart");
@@ -7,6 +9,11 @@ const totalElement = document.getElementById("total");
 const payButton = document.getElementById("pay-button");
 const clearCartButton = document.getElementById("clear-cart");
 const categoryFilter = document.getElementById("category-filter");
+
+// Сохранение корзины в LocalStorage
+const saveCart = () => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+};
 
 const calculateTotal = () => {
     let total = 0;
@@ -44,6 +51,7 @@ const renderCart = () => {
         button.addEventListener("click", () => {
             const index = Number(button.dataset.index);
             cart.splice(index, 1);
+            saveCart(); // Сохраняем после удаления
             renderCart();
         });
     });
@@ -51,6 +59,7 @@ const renderCart = () => {
 
 const addToCart = (product) => {
     cart.push(product);
+    saveCart(); // Сохраняем после добавления
     renderCart();
 };
 
@@ -84,6 +93,7 @@ categoryFilter.addEventListener("change", filterProducts);
 
 clearCartButton.addEventListener("click", () => {
     cart = [];
+    saveCart(); // Сохраняем после очистки
     renderCart();
 });
 
@@ -93,8 +103,10 @@ payButton.addEventListener("click", () => {
     } else {
         alert("Покупка прошла успешно");
         cart = [];
+        saveCart(); // Сохраняем после оплаты
         renderCart();
     }
 });
 
+// Отрисовка корзины при загрузке страницы (включая данные из LocalStorage)
 renderCart();
