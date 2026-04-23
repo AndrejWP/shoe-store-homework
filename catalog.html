@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="container">
+        <nav class="menu">
+            <ul class="menu-list">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог товаров</a></li>
+                <li><a href="item.html">Товар каталога</a></li>
+            </ul>
+        </nav>
+
+        <h1>Каталог товаров</h1>
+        <p>Выберите товар и добавьте его в корзину.</p>
+    </header>
+
+    <main class="container">
+        <section class="filter-block">
+            <h2>Фильтр товаров</h2>
+            <label for="category-filter">Выберите категорию:</label>
+            <select id="category-filter">
+                <option value="all">Все товары</option>
+                <option value="sneakers">Кроссовки</option>
+                <option value="boots">Ботинки</option>
+                <option value="classic">Классическая обувь</option>
+            </select>
+        </section>
+
+        <section class="catalog-layout">
+            <div class="products" id="products">
+                <div class="item-card product" data-category="sneakers" data-name="Nike Air Max" data-price="12000">
+                    <h3>Nike Air Max</h3>
+                    <img src="img/1.jpg" alt="Nike Air Max" width="200">
+                    <p class="short-description">Удобные кроссовки для повседневной носки.</p>
+                    <p><strong>Цена:</strong> 12000 руб.</p>
+                    <button class="add-to-cart">Добавить в корзину</button>
+                </div>
+
+                <div class="item-card product" data-category="boots" data-name="Timber Boots" data-price="15000">
+                    <h3>Timber Boots</h3>
+                    <img src="img/2.jpg" alt="Timber Boots" width="200">
+                    <p class="short-description">Надежные ботинки для холодной погоды.</p>
+                    <p><strong>Цена:</strong> 15000 руб.</p>
+                    <button class="add-to-cart">Добавить в корзину</button>
+                </div>
+
+                <div class="item-card product" data-category="classic" data-name="Classic Shoes" data-price="9800">
+                    <h3>Classic Shoes</h3>
+                    <img src="img/3.jpg" alt="Classic Shoes" width="200">
+                    <p class="short-description">Стильная классическая обувь.</p>
+                    <p><strong>Цена:</strong> 9800 руб.</p>
+                    <button class="add-to-cart">Добавить в корзину</button>
+                </div>
+            </div>
+
+            <aside class="cart-block">
+                <h2>Корзина</h2>
+                <div id="cart-items">
+                    <p>Корзина пуста</p>
+                </div>
+                <p id="total">Итого: 0 руб.</p>
+                <div class="cart-buttons">
+                    <button id="clear-cart">Очистить корзину</button>
+                    <button id="pay-button">Оплатить</button>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="container">
+        <hr>
+        <small>&copy; 2026 BLACK STORE. Все права защищены.</small>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

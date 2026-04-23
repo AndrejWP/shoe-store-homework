@@ -1,0 +1,55 @@
+/* Общие стили для всего сайта */
+body {
+    background-color: rgb(240, 240, 240); /* Фон страницы */
+    font-family: Arial, sans-serif; /* Шрифт */
+}
+
+/* Меню */
+ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0;
+}
+
+ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+a {
+    color: blue; /* Цвет текста ссылок */
+    font-size: 18px; /* Размер шрифта */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+/* Стиль для заголовков на странице товара */
+h2, h3 {
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* Картинки товаров */
+.item-card {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+}
+
+button.add-to-cart {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button.add-to-cart:hover {
+    background-color: #45a049;
+}
