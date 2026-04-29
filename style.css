@@ -53,3 +53,78 @@ button.add-to-cart {
 button.add-to-cart:hover {
     background-color: #45a049;
 }
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.auth-page {
+    display: flex;
+    justify-content: center;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 24px;
+}
+
+.auth-card h1 {
+    margin-top: 0;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.auth-form input {
+    padding: 10px;
+    border: 1px solid #bbb;
+    font-size: 16px;
+}
+
+.auth-form button,
+.auth-links a {
+    display: inline-block;
+    padding: 10px 14px;
+    background-color: #333;
+    color: white;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.auth-form button:hover,
+.auth-links a:hover {
+    background-color: #111;
+    text-decoration: none;
+}
+
+.auth-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.error-message {
+    padding: 10px;
+    background-color: #ffe5e5;
+    color: #9b1c1c;
+}
+
+.success-message {
+    padding: 10px;
+    background-color: #e5ffe9;
+    color: #1b6b2a;
+}
+
+.demo-login {
+    color: #555;
+    font-size: 14px;
+}
